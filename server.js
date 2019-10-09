@@ -28,7 +28,6 @@ app.get("/api/hello", function (req, res) {
 
 // Aziz work
 app.get("/api/timestamp/:date_string?", function (req,res) {
-
   let unixResult = 0;
   let utcResult = "";
 
@@ -60,7 +59,6 @@ app.get("/api/timestamp/:date_string?", function (req,res) {
             utcResult = moment(unixResult).format('ddd, D MMM YYYY h:mm:ss Z');
           }
         }
-
 
   res.send({
     "unix": unixResult,
